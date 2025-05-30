@@ -4,12 +4,15 @@
 
 /* Variáveis de Cores */
 :root {
-    --primary-color: #A36A00; /* Um marrom dourado, cor do melado */
-    --secondary-color: #FFD700; /* Dourado vibrante */
-    --text-color: #333;
-    --light-bg: #F8F4E3; /* Um creme suave */
-    --dark-bg: #4B3A00; /* Um marrom escuro para contrastar */
-    --white: #fff;
+  /* Variáveis de Cores */
+:root {
+    --primary-color: #B22222; /* Um vermelho tijolo ou rústico, forte e acolhedor */
+    --secondary-color: #FF6347; /* Vermelho tomate, mais vivo e brilhante para destaque */
+    --text-color: #333; /* Mantemos o preto para boa leitura */
+    --light-bg: #FFF5EE; /* Um branco cremoso ou pêssego muito claro para fundos leves */
+    --dark-bg: #8B0000; /* Um vermelho escuro e profundo para contrastes ou rodapé */
+    --white: #fff; /* O branco puro continua essencial */
+}
 }
 
 /* Reset Básico */

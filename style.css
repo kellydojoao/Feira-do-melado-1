@@ -201,7 +201,7 @@ header nav ul li a:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px #fff;
     transition: transform 0.3s ease;
 }
 
@@ -223,7 +223,7 @@ form input[type="email"],
 form textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #908;
     border-radius: 8px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;

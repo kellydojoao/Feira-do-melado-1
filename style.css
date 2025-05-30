@@ -1,0 +1,320 @@
+/* Importação de fontes do Google Fonts */
+/* Dancing Script para títulos e Open Sans para textos */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* Variáveis de Cores */
+:root {
+    --primary-color: #A36A00; /* Um marrom dourado, cor do melado */
+    --secondary-color: #FFD700; /* Dourado vibrante */
+    --text-color: #333;
+    --light-bg: #F8F4E3; /* Um creme suave */
+    --dark-bg: #4B3A00; /* Um marrom escuro para contrastar */
+    --white: #fff;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+/* Tipografia */
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 2.8em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x800?text=Campo+de+Cana+ou+Melado') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 150px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+#hero h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+/* Seções de Conteúdo */
+#sobre p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: justify;
+}
+
+/* Atrações Grid */
+.grid-atracoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.atracao-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.atracao-item:hover {
+    transform: translateY(-10px);
+}
+
+.atracao-item h3 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Galeria */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Formulário de Contato */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button.btn {
+    align-self: center;
+    border: none;
+    cursor: pointer;
+}
+
+.contato-info {
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    #hero h2 {
+        font-size: 3em;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 5px 15px;
+    }
+
+    .section-padding {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    .grid-atracoes {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+}

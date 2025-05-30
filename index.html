@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feira do Melado - A Doçura da Tradição!</title>
+    <title>Feira do Melado de Capanema PR - A Doçura da Nossa Terra!</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -15,10 +13,11 @@
             <h1>Feira do Melado</h1>
             <nav>
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#atracoes">Atrações</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="atracoes.html">Atrações</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contatos.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,76 +25,61 @@
 
     <section id="hero">
         <div class="hero-content">
-            <h2>Celebre a Tradição e o Sabor Único!</h2>
-            <p>Venha adoçar sua vida na maior festa do melado da região!</p>
-            <a href="#atracoes" class="btn">Saiba Mais</a>
+            <h2>Celebre a Tradição e o Sabor Único de Capanema!</h2>
+            <p>Venha adoçar sua vida na maior festa do melado do Sudoeste do Paraná, um evento que celebra nossa cultura, agricultura e o doce sabor do progresso!</p>
+            <a href="atracoes.html" class="btn">Conheça as Atrações</a>
         </div>
     </section>
 
-    <section id="sobre" class="section-padding">
+    <section id="welcome" class="section-padding">
         <div class="container">
-            <h2>Sobre a Feira do Melado</h2>
-            <p>A Feira do Melado é um evento tradicional que celebra a cultura local e a produção artesanal de melado. Com raízes profundas na comunidade, a feira oferece uma experiência única para toda a família, unindo gastronomia, arte, música e muita alegria. É o lugar perfeito para conhecer os produtores locais, saborear delícias e se encantar com a riqueza da nossa história.</p>
-            <p>Anote na agenda: **[Data da Feira]** em **[Local da Feira]**!</p>
+            <h2>Bem-vindos à Feira do Melado!</h2>
+            <p>Capanema, a "Princesa do Iguaçu", tem o orgulho de apresentar a Feira do Melado, um evento que se tornou parte essencial da nossa identidade. Mais que uma feira, é um encontro de gerações, um palco para nossos produtores e artistas, e uma celebração da riqueza da nossa terra.</p>
+            <p>Prepare-se para dias de alegria, sabor e muitas descobertas. A Feira do Melado é o lugar onde a tradição se encontra com a inovação, e cada gota de melado conta uma história de trabalho e dedicação.</p>
+            <a href="sobre.html" class="btn">Saiba Mais Sobre Nós</a>
         </div>
     </section>
 
-    <section id="atracoes" class="section-padding bg-light">
+    <section id="highlights" class="section-padding bg-light">
         <div class="container">
-            <h2>Atrações Principais</h2>
-            <div class="grid-atracoes">
-                <div class="atracao-item">
-                    <h3>Gastronomia Típica</h3>
-                    <p>Delicie-se com quitutes feitos com melado, doces caseiros, pães e muito mais!</p>
+            <h2>Destaques da Feira</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <img src="img/atracao1.jpg" alt="Destaque Gastronomia">
+                    <div class="card-content">
+                        <h3>Gastronomia Regional</h3>
+                        <p>Descubra uma explosão de sabores com pratos e doces à base de melado, além de outras delícias típicas da culinária paranaense. Feito por mãos capanemenses, cada quitute é um abraço no paladar!</p>
+                    </div>
                 </div>
-                <div class="atracao-item">
-                    <h3>Shows e Apresentações</h3>
-                    <p>Música boa e apresentações culturais para animar a feira do início ao fim.</p>
+                <div class="card">
+                    <img src="img/atracao2.jpg" alt="Destaque Shows">
+                    <div class="card-content">
+                        <h3>Shows e Cultura</h3>
+                        <p>Palcos repletos de música, dança e apresentações artísticas de talentos locais e regionais. Uma programação cultural diversificada para todas as idades, animando a feira do início ao fim.</p>
+                    </div>
                 </div>
-                <div class="atracao-item">
-                    <h3>Oficinas e Workshops</h3>
-                    <p>Aprenda sobre a produção do melado e outras tradições locais.</p>
-                </div>
-                <div class="atracao-item">
-                    <h3>Artesanato Local</h3>
-                    <p>Leve para casa peças únicas feitas por artesãos da nossa região.</p>
+                <div class="card">
+                    <img src="img/galeria1.jpg" alt="Destaque Artesanato">
+                    <div class="card-content">
+                        <h3>Artesanato e Produtos</h3>
+                        <p>Leve para casa um pedaço da nossa arte e tradição. Peças únicas de artesanato local, produtos agrícolas fresquinhos e, claro, o autêntico melado de cana, direto dos produtores!</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="galeria" class="section-padding">
-        <div class="container">
-            <h2>Galeria de Fotos</h2>
-            <div class="grid-galeria">
-                <img src="https://media.folhadecapanema.com.br/2024/07/8fc4b7b3-melado_capanema-45-scaled.jpg" alt="Melado artesanal">
-                <img src="https://cdn.jornaldebeltrao.com.br/wp-content/uploads/2022/08/Ultima-1024x768.jpg" alt="Pessoas na feira">
-                <img src="https://divirtasecuritiba.com/wp-content/uploads/2019/12/image-9.png?w=1100&h=550&crop=1" alt="Mesa de doces">
-                <img src="https://aces.marvirtual.com.br/upload/noticias/g_12619.jpg" alt="Produtos artesanais">
-                <img src="https://fminterativa.net/files/noticias/3406/large_20160808_144621_75ca59debf4a4e93268a72c854e0e351.jpg" alt="Família se divertindo">
-                <img src="https://cdnin.blob.core.windows.net/cdn/28299-feiraadoameladoa2024__asimoneamendes.jpg" alt="Banda tocando">
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="atracoes.html" class="btn">Ver Todas as Atrações</a>
             </div>
-        </div>
-    </section>
-
-    <section id="contato" class="section-padding bg-light">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <p>Tem alguma dúvida ou gostaria de participar? Entre em contato conosco!</p>
-            <form>
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu Email" required>
-                <textarea placeholder="Sua Mensagem" rows="5"></textarea>
-                <button type="submit" class="btn">Enviar Mensagem</button>
-            </form>
-            <p class="contato-info">Siga-nos nas redes sociais: [Ícone Facebook] [Ícone Instagram]</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Feira do Melado. Todos os direitos reservados.</p>
-            <p>Desenvolvido com carinho para você!</p>
+            <p>&copy; 2025 Feira do Melado de Capanema PR. Todos os direitos reservados.</p>
+            <p>Orgulho da nossa terra, doce sabor da nossa tradição.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/feiradomeladocapanema" target="_blank" aria-label="Facebook da Feira"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://instagram.com/feiradomeladocapanema" target="_blank" aria-label="Instagram da Feira"><i class="fab fa-instagram-square"></i></a>
+            </div>
         </div>
     </footer>
 </body>

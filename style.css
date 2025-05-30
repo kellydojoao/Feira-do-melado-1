@@ -1,18 +1,18 @@
-/* Importação de fontes do Google Fonts */
-/* Dancing Script para títulos e Open Sans para textos */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+/* style.css */
 
-/* Variáveis de Cores */
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Variáveis de Cores (Inspiradas em Capanema PR e Melado) */
 :root {
-  /* Variáveis de Cores */
-:root {
-    --primary-color: #B22222; /* Um vermelho tijolo ou rústico, forte e acolhedor */
-    --secondary-color: #FF6347; /* Vermelho tomate, mais vivo e brilhante para destaque */
-    --text-color: #333; /* Mantemos o preto para boa leitura */
-    --light-bg: #FFF5EE; /* Um branco cremoso ou pêssego muito claro para fundos leves */
-    --dark-bg: #8B0000; /* Um vermelho escuro e profundo para contrastes ou rodapé */
-    --white: #fff; /* O branco puro continua essencial */
-}
+    --primary-color: #2F4F4F; /* Verde escuro/azulado, como a natureza e rios de Capanema */
+    --secondary-color: #8B4513; /* Marrom sela, remetendo à terra, agricultura e melado */
+    --accent-color: #DAA520; /* Dourado escuro, para destaque e o brilho do melado */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --background-light: #F8F8F8; /* Um cinza muito claro para seções */
+    --background-dark: #203A3A; /* Um verde/azul bem escuro para rodapé/header */
+    --white: #ffffff;
 }
 
 /* Reset Básico */
@@ -23,16 +23,16 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--light-bg);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background-color: var(--white);
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .section-padding {
@@ -40,63 +40,80 @@ body {
 }
 
 .bg-light {
-    background-color: var(--light-bg);
+    background-color: var(--background-light);
 }
 
 /* Tipografia */
-h1, h2, h3 {
-    font-family: 'Dancing Script', cursive;
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
     color: var(--primary-color);
+    margin-bottom: 25px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 3.8em;
     color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
 
 h2 {
     font-size: 2.8em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
 }
 
 h3 {
-    font-size: 1.8em;
+    font-size: 2em;
+    color: var(--secondary-color);
 }
 
 p {
     margin-bottom: 20px;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Botões */
 .btn {
     display: inline-block;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 15px 30px;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: 15px 35px;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    border: 2px solid var(--primary-color);
+    border: none;
+    cursor: pointer;
+    text-align: center;
 }
 
 .btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--white);
     transform: translateY(-3px);
 }
 
 /* Header */
 header {
-    background-color: var(--primary-color);
+    background-color: var(--background-dark);
     color: var(--white);
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 header .container {
@@ -105,193 +122,282 @@ header .container {
     align-items: center;
 }
 
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 0;
+    color: var(--white);
+    text-shadow: none;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
 }
 
 header nav ul li {
-    margin-left: 30px;
+    margin-left: 35px;
 }
 
 header nav ul li a {
     color: var(--white);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: var(--secondary-color);
-    border-bottom: 2px solid var(--secondary-color);
+    color: var(--accent-color);
 }
 
-/* Hero Section */
+header nav ul li a:hover::after,
+header nav ul li a.active::after { /* Adiciona estilo para a página ativa */
+    width: 100%;
+}
+
+/* Hero Section (Apenas em index.html) */
 #hero {
-    background: linear-gradient(rgb(90, 1, 1), rgb(172, 2, 2)), url('https://via.placeholder.com/1500x800?text=Campo+de+Cana+ou+Melado') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-background.jpg') no-repeat center center/cover;
     color: var(--white);
     text-align: center;
-    padding: 150px 0;
+    padding: 180px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
+    min-height: 80vh; /* Altura mínima para a seção hero */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .hero-content {
-    max-width: 800px;
-}
-
-#hero h2 {
-    font-size: 4em;
-    margin-bottom: 20px;
-    color: var(--white);
-    text-shadow: 2px 2px 5px rgba(255, 2, 2, 0.7);
+    max-width: 900px;
 }
 
 #hero p {
-    font-size: 1.5em;
-    margin-bottom: 40px;
+    font-size: 1.6em;
+    margin-bottom: 45px;
     color: var(--white);
+    text-align: center;
 }
 
-/* Seções de Conteúdo */
-#sobre p {
-    max-width: 800px;
+/* Seções de Conteúdo Genéricas */
+.content-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content-section p {
+    max-width: 900px;
     margin: 0 auto 20px auto;
     text-align: justify;
 }
 
-/* Atrações Grid */
-.grid-atracoes {
+.content-section h2 {
+    margin-bottom: 40px;
+}
+
+/* Cards de Conteúdo (Ex: Atrações) */
+.grid-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    text-align: center;
+    margin-top: 50px;
 }
 
-.atracao-item {
+.card {
     background-color: var(--white);
-    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgb(216, 64, 64);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
-.atracao-item:hover {
+.card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-.atracao-item h3 {
-    color: var(--primary-color);
-    font-size: 1.5em;
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    margin-top: 0;
     margin-bottom: 15px;
+    font-size: 1.6em;
+    text-align: left;
 }
 
-/* Galeria */
+.card-content p {
+    font-size: 0.95em;
+    color: var(--text-dark);
+    text-align: justify;
+}
+
+/* Galeria de Imagens */
 .grid-galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 15px;
-    max-width: 1000px;
-    margin: 0 auto;
+    margin-top: 40px;
 }
 
 .grid-galeria img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 3px 10px #fff;
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .grid-galeria img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* Formulário de Contato */
-form {
-    max-width: 600px;
-    margin: 0 auto;
+.contact-form {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid rgba(153, 0, 26, 0.753);
-    border-radius: 8px;
-    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
     font-size: 1em;
 }
 
-form textarea {
+.contact-form textarea {
     resize: vertical;
+    min-height: 120px;
 }
 
-form button.btn {
+.contact-form .btn {
     align-self: center;
-    border: none;
-    cursor: pointer;
+    margin-top: 10px;
 }
 
-.contato-info {
+.contact-info {
+    text-align: center;
     margin-top: 30px;
     font-size: 1.1em;
-    color: var(--text-color);
 }
+
+.social-icons a {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
 
 /* Footer */
 footer {
-    background-color: var(--dark-bg);
-    color: var(--white);
+    background-color: var(--background-dark);
+    color: var(--text-light);
     text-align: center;
     padding: 40px 0;
     font-size: 0.9em;
+    margin-top: 50px;
 }
 
 footer p {
-    margin-bottom: 5px;
-    color: var(--white);
+    margin-bottom: 10px;
+    color: var(--text-light);
+    text-align: center;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     h1 {
-        font-size: 2.5em;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    #hero h2 {
         font-size: 3em;
     }
-
+    h2 {
+        font-size: 2.2em;
+    }
+    #hero {
+        padding: 120px 0;
+        min-height: 60vh;
+    }
+    #hero p {
+        font-size: 1.4em;
+    }
     header .container {
         flex-direction: column;
+        text-align: center;
     }
-
     header nav ul {
         margin-top: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
-
     header nav ul li {
         margin: 5px 15px;
     }
-
     .section-padding {
-        padding: 50px 0;
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    #hero h2 {
+        font-size: 3em;
+    }
+    #hero p {
+        font-size: 1.2em;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+    .grid-galeria {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
@@ -299,25 +405,19 @@ footer p {
     h1 {
         font-size: 2em;
     }
-
     h2 {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
-
     #hero h2 {
         font-size: 2.5em;
     }
-
-    .btn {
-        padding: 12px 25px;
-        font-size: 0.9em;
+    header h1 {
+        font-size: 1.8em;
     }
-
-    .grid-atracoes {
-        grid-template-columns: 1fr;
+    header nav ul li {
+        margin: 5px 10px;
     }
-
-    .grid-galeria {
-        grid-template-columns: 1fr;
+    .section-padding {
+        padding: 40px 0;
     }
 }

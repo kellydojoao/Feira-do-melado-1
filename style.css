@@ -6,8 +6,8 @@
 /* Variáveis de Cores (Inspiradas em Capanema PR e Melado) */
 :root {
     --primary-color: #000000; /* titulos grandes e icones*/
-    --secondary-color: #f10eb8; /* Marrom sela, remetendo à terra, agricultura e melado */
-    --accent-color: #DAA520; /* Dourado escuro, para destaque e o brilho do melado */
+    --secondary-color: #0a0a0a; /* titulos pequenos */
+    --accent-color: #062066; /* Dourado escuro, para destaque e o brilho do melado */
     --text-dark: #333;
     --text-light: #f4f4f4;
     --background-light: #F8F8F8; /* Um cinza muito claro para seções */
@@ -15,7 +15,7 @@
     --white: #ffffff;
 }
 
-/* Reset Básico */
+/* Reset Básico */hggbgg
 * {
     margin: 0;
     padding: 0;

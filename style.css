@@ -8,8 +8,8 @@
     --primary-color: #000000; /* titulos grandes e icones*/
     --secondary-color: #0a0a0a; /* titulos pequenos */
     --accent-color: #062066; /* botoes */
-    --text-dark: #333333;
-    --text-light: #f4f4f4;
+    --text-dark: #333333; /* letra pequena ;*/
+    --text-light: #4ef80b;
     --background-light: #F8F8F8; /* Um cinza muito claro para seções */
     --background-dark: #203A3A; /* Um verde/azul bem escuro para rodapé/header */
     --white: #ffffff;

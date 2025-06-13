@@ -7,8 +7,8 @@
 :root {
     --primary-color: #000000; /* titulos grandes e icones*/
     --secondary-color: #0a0a0a; /* titulos pequenos */
-    --accent-color: #062066; /* Dourado escuro, para destaque e o brilho do melado */
-    --text-dark: #333;
+    --accent-color: #062066; /* botoes */
+    --text-dark: #0000001f;
     --text-light: #f4f4f4;
     --background-light: #F8F8F8; /* Um cinza muito claro para seções */
     --background-dark: #203A3A; /* Um verde/azul bem escuro para rodapé/header */

@@ -9,9 +9,9 @@
     --secondary-color: #0a0a0a; /* titulos pequenos */
     --accent-color: #062066; /* botoes */
     --text-dark: #333333; /* letra pequena ;*/
-    --text-light: #4ef80b;
+    --text-light: #0a0a0a; /* informaçoes/*
     --background-light: #F8F8F8; /* Um cinza muito claro para seções */
-    --background-dark: #203A3A; /* Um verde/azul bem escuro para rodapé/header */
+    --background-dark: #f507cd; /* Um verde/azul bem escuro para rodapé/header */
     --white: #ffffff;
 }
 
